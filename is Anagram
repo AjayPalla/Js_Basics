@@ -1,0 +1,9 @@
+function isAnagram(firstStr, secondStr){
+ let inpOne = firstStr.toLowerCase();
+ let inpTwo = secondStr.toLowerCase();
+
+  let sortedStr1 = firstStr.split('').sort().join('');
+  let sortedStr2 = secondStr.split('').sort().join('');
+
+    return sortedStr1 === sortedStr2;
+}
