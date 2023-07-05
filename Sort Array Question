@@ -1,0 +1,21 @@
+var InputArr = [{ p: 4 }, { p: 2 }, { p: 9 }, { p: 6 }];
+ 
+var outputArr = [{p:2},{},{p:4},{},{p:6},{},{},{p:9}]
+
+
+    function sortAndFilling(inpArr){
+        let result = [];
+        let sortedInput = inpArr.sort((a,b)=> a.p -b.p);
+        let maxLen = sortedInput[sortedInput.length -1].p;
+        let minLen = sortedInput[0].p;
+        for(i= minLen; i<=maxLen; i++){
+        const data = sortedInput.find((elem) => elem.p === i);
+        if(data){
+            result.push(data)
+        }
+        else{
+            result.push({})
+        }
+        }
+        return result
+        }
