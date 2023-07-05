@@ -1,0 +1,18 @@
+[{id:1,name:"a"},{id:2,name:"b"},{id:3,name:"c"},{id:1,name:"d"},{id:3,name:"e"}]
+Expected Output: [{id:1,name:["a","d"]},{id:2,name:"b"},{id:3,name:["c","e"]}
+
+function groupByJson(arr) {
+
+    let result = [];
+    arr.forEach(el =>{
+      const alreadyExits = result.find((ele) => ele.id === el.id);
+      if(alreadyExits){
+         alreadyExits?.name?.push(el.name);
+      }
+      else{
+        result.push({id: el.id, name:[el.name]});
+      }
+    })
+    return result;
+  }
+  console.log(groupByJson([{id:1,name:"a"},{id:2,name:"b"},{id:3,name:"c"},{id:1,name:"d"},{id:3,name:"e"}]));
