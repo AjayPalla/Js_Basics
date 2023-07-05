@@ -1,0 +1,15 @@
+function findLongestWord(inpStr){
+let words = inpStr.split(' ');
+let maxlen = 0;
+let longestWord = '';
+for(i=0; i<=inpStr.length;i++){
+     if (words[i].length > maxlen) {
+      maxLength = words[i].length;
+      longestWord = words[i];
+    }
+}
+  console.log(longestWord);
+  console.log(maxlen);
+ }
+
+findLongestWord("Testing the longest word in a given string");
