@@ -1,0 +1,17 @@
+const sumOfNumbers = (str) => {
+        let sum = 0
+        let temp = '';
+        for(let i = 0; i < str.length; i++) {
+        //check current item is Number or not
+            if(Number(str[i])){   
+                  temp = temp + str[i];
+                 // reset temp string to empty if next item is not a number
+                if(!Number(str[i+1])){ 
+                    sum = sum + Number(temp)
+                    temp = ''
+                }
+            }
+        }
+        return sum
+    }
+let Ajay = sumOfNumbers('add123456with376765willgive887686');
