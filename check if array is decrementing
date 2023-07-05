@@ -1,0 +1,12 @@
+function isArrayDecrementing(arrInput) {
+    for (let i=1;i<arrInput.length;i++) {
+        if(arrInput[i-1] <= arrInput[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+//input
+console.log(isArrayDecrementing([5,4,3,2,1]));
