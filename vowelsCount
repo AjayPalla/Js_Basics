@@ -1,0 +1,11 @@
+function countVowels(inpStr) {
+    let vowel = 0;
+    let cons = 0;
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let splitedArray = inpStr.toLowerCase().split('');
+    splitedArray.forEach(el => {
+        vowels.indexOf(el) !== -1 ? vowel++ : cons++
+    })
+   console.log("Total vowels and cons count", vowel, cons);
+}
+countVowels('ouwyeifuhksjzhkjaliwjhdlas');
